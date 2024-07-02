@@ -1,4 +1,4 @@
-// Dichiariazione Variabili Input Utente
+// Dichiariazione Variabili
 let etaUtente
 let kmUtente
 let costoChilometro = 0.21
@@ -13,12 +13,13 @@ console.log(kmUtente)
 etaUtente = prompt('Inserisci la tua età') //string | null
 etaUtente = parseInt(etaUtente) //number
 console.log(etaUtente)
+
 // 1) Calcolo del Prezzo del Biglietto
 let prezzoBiglietto = kmUtente * costoChilometro
 console.log(prezzoBiglietto) //number
 
 // 2) Calcolo dello Sconto del biglietto e del Prezzo Totale
-if (etaUtente < 18){
+if (etaUtente <= 17){
     // -- SE valore età minimo di 18 applica -20%
     prezzoSconto = prezzoBiglietto * 0.20
     prezzoTotale = prezzoBiglietto - prezzoSconto
@@ -28,7 +29,7 @@ if (etaUtente < 18){
     prezzoSconto = prezzoBiglietto * 0.40
     prezzoTotale = prezzoBiglietto - prezzoSconto
     console.log(prezzoTotale)
-} else {
+} else (etaUtente >= 18 || etaUtente <=64) {
     // -- ALTRIMENNTI non applicare nessuno sconto
     console.log(prezzoTotale)
 }
