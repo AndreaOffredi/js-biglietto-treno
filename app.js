@@ -29,8 +29,10 @@ if (etaUtente <= 17){
     prezzoSconto = prezzoBiglietto * 0.40
     prezzoTotale = prezzoBiglietto - prezzoSconto
     console.log(prezzoTotale)
-} else (etaUtente >= 18 || etaUtente <=64) {
+} else {
     // -- ALTRIMENNTI non applicare nessuno sconto
-    console.log(prezzoTotale)
+    prezzoTotale = prezzoBiglietto
 }
-// 3) Stampa su HTML
+// 3) Stampa prezzo in decimali
+const prezzoArrotondato = prezzoTotale.toFixed(2) // string
+console.log(prezzoArrotondato)
